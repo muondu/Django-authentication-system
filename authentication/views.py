@@ -17,7 +17,7 @@ def signup(request):
         pass2 = request.POST['pass2']
         
 
-        myuser = User.objects.create(username, email, pass1,)
+        myuser = User.objects.create_user(username, email, pass1,)
         myuser.first_name = fname
         myuser.last_name = lname
 
