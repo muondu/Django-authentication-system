@@ -96,6 +96,14 @@ def signin(request):
             login(request, user)
             fname = user.first_name
             return render(request, "authentication/users/corneliusstatement.html")
+        elif username =="tmutua" and pass1 == "passion12=":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/TKiokostatement.html")
+        elif username =="smutua" and pass1 == "pineaple12/":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/stephenstatement.html")
         
         
         else:
