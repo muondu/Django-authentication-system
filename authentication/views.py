@@ -45,10 +45,24 @@ def signin(request):
             login(request, user)
             fname = user.first_name
             return render(request, "authentication/users/danielStatement.html")
+
         elif username =="trotich" and pass1 == "mercury452!":
             login(request, user)
             fname = user.first_name
             return render(request, "authentication/users/timothystatement.html")
+
+        elif username =="hkyalo" and pass1 == "venus84#":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/henrystatement.html")
+        elif username =="pthuku" and pass1 == "earth12>":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/peterstatement.html")
+        elif username =="patwachira" and pass1 == "mars12345":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/patricstatement.html")
         else:
             messages.error(request, "Wrong credidentials")
             return redirect('home')
