@@ -92,6 +92,10 @@ def signin(request):
             login(request, user)
             fname = user.first_name
             return render(request, "authentication/users/Dennisstatement.html")
+        elif username =="conyango" and pass1 == "orange12+":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/corneliusstatement.html")
         
         
         else:
