@@ -77,6 +77,12 @@ def signin(request):
             login(request, user)
             fname = user.first_name
             return render(request, "authentication/users/Duncanstatement.html")
+
+        elif username =="erigha" and pass1 == "sun12345(":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/Edwinstatement.html")
+        
         
         else:
             messages.error(request, "Wrong credidentials")
