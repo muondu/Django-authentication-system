@@ -1,3 +1,4 @@
+from django.contrib import auth
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
@@ -39,10 +40,15 @@ def signin(request):
 
         user = authenticate(username=username, password=pass1)
 
-        if user is not None:
+        
+        if username =="dmuondu" and pass1 == "apple12.":
             login(request, user)
             fname = user.first_name
-            return render(request, "authentication/index.html",{'fname': fname})
+            return render(request, "authentication/users/danielStatement.html")
+        elif username =="trotich" and pass1 == "mercury452!":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/timothystatement.html")
         else:
             messages.error(request, "Wrong credidentials")
             return redirect('home')
