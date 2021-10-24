@@ -59,10 +59,18 @@ def signin(request):
             login(request, user)
             fname = user.first_name
             return render(request, "authentication/users/peterstatement.html")
+            
         elif username =="patwachira" and pass1 == "mars12345":
             login(request, user)
             fname = user.first_name
             return render(request, "authentication/users/patricstatement.html")
+        
+        elif username =="bmwaura" and pass1 == "jupiter12^":
+            login(request, user)
+            fname = user.first_name
+            return render(request, "authentication/users/benstatement.html")
+   
+        
         else:
             messages.error(request, "Wrong credidentials")
             return redirect('home')
